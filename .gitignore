@@ -1,0 +1,24 @@
+# node
+node_modules
+
+# build
+# dist
+
+# Yarn / npm
+yarn-error.log
+yarn-error.log*
+.yarn-integrity
+yarn-debug.log*
+npm-debug.log*
+.npm
+
+# Logs
+logs
+*.log
+
+# dotenv environment variables file
+.env
+.env.*
+
+# Mac files
+.DS_Store

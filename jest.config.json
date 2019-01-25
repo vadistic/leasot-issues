@@ -1,0 +1,12 @@
+{
+  "rootDir": "./",
+  "testRegex": "(\\.|/)(test|spec)\\.(jsx?|tsx?)$",
+  "transform": {
+    "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/dist/index.js"
+  },
+  "collectCoverage": true,
+  "coverageDirectory": "coverage",
+  "coverageReporters": ["text", "lcov"],
+  "collectCoverageFrom": ["src/**/*.{ts,tsx}", "!**/node_modules/**"],
+  "moduleFileExtensions": ["ts", "js", "tsx", "jsx", "json", "yml"]
+}

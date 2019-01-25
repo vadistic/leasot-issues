@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "moduleResolution": "node",
+    "module": "commonjs",
+    "lib": ["dom", "esnext"],
+    "rootDir": "src",
+    "outDir": "dist",
+    "declaration": true,
+    "sourceMap": false,
+    // modules
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    // strict
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
+    // lint
+    "forceConsistentCasingInFileNames": true,
+    "noUnusedParameters": true,
+    "skipLibCheck": true,
+    // less strict
+    "noUnusedLocals": false // dev
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist", "coverage", "examples", " test"]
+}

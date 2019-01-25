@@ -1,0 +1,30 @@
+{
+  "name": "leasot-issues",
+  "version": "0.1.0",
+  "description": "Parse and output github issues references from your code comments (leasot plugin)",
+  "main": "dist/index.js",
+  "repository": "https://github.com/vadistic/issue-fixer",
+  "author": "Jakub Wadas <vadistic@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "copy": "shx cp ./dist/parsers/* ./node_modules/leasot/dist/lib/parsers/",
+    "install": "shx cp ./dist/parsers/* ./node_modules/leasot/dist/lib/parsers/",
+    "build": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "leasot": "^7.2.0",
+    "shx": "^0.3.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.13",
+    "@types/node": "^10.12.18",
+    "jest": "^23.6.0",
+    "prettier": "^1.16.1",
+    "ts-jest": "^23.10.5",
+    "ts-node": "^8.0.1",
+    "tslint": "^5.12.1",
+    "tslint-config-prettier": "^1.17.0",
+    "typescript": "^3.2.4"
+  }
+}
