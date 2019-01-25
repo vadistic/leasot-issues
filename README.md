@@ -11,9 +11,9 @@ $ yarn install github.com/vadistic/leasot-issues
 All set!
 ```
 
-Package copies `issuesParser` to leasot dir in postinstall script so `leasot` needs to be installed first on the sam elevel (global/local).
+Package copies parser to leasot dir in node_modules during postinstall - so `leasot` needs to be installed first on the same level (global/local).
 
-It can be fixed by reinstall or
+To fix it - reinstall this package or jsut copy parser file:
 
 ```sh
 $ cp ./node_modules/dist/parsers/defaultIssues.js ./node_modules/leasot/dist/lib/parsers/
@@ -22,7 +22,7 @@ All fixed!
 
 ## Usage
 
-Add issues parser while using `leasot`
+Just specify issues parser while using `leasot`
 
 ```sh
 $ leasot test/*.ts -A .ts,defaultIssues
@@ -36,6 +36,6 @@ test/index.test.ts
 
 ## Todo
 
-Main idea was to pull info from github using `@octokit/rest`, show issue data, and allowing filtering by closed/ open. The thing is that leasot parser is sync function tahat is run by some weird concurrency setup and making async call is impossible.
+Main idea was to pull info from github using `@octokit/rest`, show issue data, and allowing filtering by closed/ open. The thing is that leasot parser is sync function with some higher level concurrent runner setup and making async call in parser seems impossible.
 
-Maybe it would be possible via custom reporter.
+Maybe it would be possible via custom reporter?
